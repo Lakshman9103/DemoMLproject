@@ -2,15 +2,14 @@ import sys
 import pandas as pd
 import os
 import numpy as np
-
 from dataclasses import dataclass
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer   
 from src.logger import logging
-
 from src.exception import CustomException
+from src.utils import save_object
 
 @dataclass
 class DataTransformationConfig:
